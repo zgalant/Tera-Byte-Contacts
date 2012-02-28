@@ -7,19 +7,10 @@
 
 <form action = "/addContact" method = "post">
 	<div>
-		<fieldset name="contactType" style="width:200px;">
-			<legend>Contact Type</legend>
-			<input type="radio" name="contactType" value="CAMPER" checked>Camper</input>
-			<br/>
-			<input type="radio" name="contactType" value="PARENT">Parent</input>
-			<br/>
-			<input type="radio" name="contactType" value="COUNSELOR">Counselor</input>
-		</fieldset>
-		<br/>
-		<label>First Name</label><br/>
+		<label>Camper First Name</label><br/>
 		<input type="text" id = "firstNameBox" name = "firstName" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('firstNameBox')"></input>
 		<br/>
-		<label>Last Name</label><br/>
+		<label>Camper Last Name</label><br/>
 		<input type="text" id = "lastNameBox" name = "lastName" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('lastNameBox')"></input>
 		<br/>
 		<label>Email (separate multiple by commas)</label><br/>
@@ -27,9 +18,6 @@
 		<br/>
 		<label>Cell Phone</label><br/>
 		<input type="text" id = "phoneBox" name = "cellPhone" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('phoneBox')"></input>
-		<br/>
-		<label>Home Phone</label><br/>
-		<input type="text" id = "homePhoneBox" name = "homePhone" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('homePhoneBox')"></input>
 		<br/>
 		<label>School</label><br/>
 		<input type="text" id = "schoolBox" name = "school" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('schoolBox')"></input>
@@ -48,13 +36,33 @@
 			{% endfor %}
 		</select>
 		<br/>
-		<label>Relation</label>
-		<select name="relation">
-			<option value="" />
-			{% for contact in contacts %}
-				<option value="{{contact.key.id}}">{{contact.firstName}}&nbsp;{{contact.lastName}}</option><br/>
-			{% endfor %}
-		</select>
+		<br/>
+		<label>Parent 1 First Name</label><br/>
+		<input type="text" id = "firstNameBox" name = "p1firstName" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('firstNameBox')"></input>
+		<br/>
+		<label>Parent 1 Last Name</label><br/>
+		<input type="text" id = "lastNameBox" name = "p1lastName" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('lastNameBox')"></input>
+		<br/>
+		<label>Parent 1 Email (separate multiple by commas)</label><br/>
+		<input type="text" id = "emailBox" name = "p1email" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('emailBox')"></input>
+		<br/>
+		<label>Parent 1 Cell Phone</label><br/>
+		<input type="text" id = "phoneBox" name = "p1cellPhone" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('phoneBox')"></input>
+		<br/>
+		<label>Parent 2 First Name</label><br/>
+		<input type="text" id = "firstNameBox" name = "p2firstName" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('firstNameBox')"></input>
+		<br/>
+		<label>Parent 2 Last Name</label><br/>
+		<input type="text" id = "lastNameBox" name = "p2lastName" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('lastNameBox')"></input>
+		<br/>
+		<label>Parent 2 Email (separate multiple by commas)</label><br/>
+		<input type="text" id = "emailBox" name = "p2email" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('emailBox')"></input>
+		<br/>
+		<label>Parent 2 Cell Phone</label><br/>
+		<input type="text" id = "phoneBox" name = "p2cellPhone" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('phoneBox')"></input>
+		<br/>
+		<label>Home Phone</label><br/>
+		<input type="text" id = "homePhoneBox" name = "homePhone" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('homePhoneBox')"></input>
 		<br/>
 	</div>
 	<br/>
