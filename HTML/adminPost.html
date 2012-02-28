@@ -1,0 +1,14 @@
+
+<div class = "story">
+	<p class = "story-text">{{ post.story|escape }}</p>
+	<form action = "/publish" method = "post">
+		<input type = "hidden" name = "idPublish" value = "{{ post.key.id }}" />
+		<input type = "submit" value = "publish" />
+	</form>
+	<form action = "/delete" method = "post">
+		<input type = "hidden" name = "idDelete" value = "{{ post.key.id }}" />
+		<input type = "submit" value = "delete" />
+	</form>
+	<span class = "meta">posted&nbsp;by&nbsp;{{username}}&nbsp;{{time}}</span>
+	
+</div>

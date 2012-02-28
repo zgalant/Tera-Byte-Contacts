@@ -1,0 +1,82 @@
+body {
+	text-align:left;
+	background-color: #373C46;
+	overflow-x:hidden;
+	font-family: helvetica;
+}
+
+.content {
+	margin:0px 300px 0px 300px;
+	padding: 20px;
+	text-align:left;
+	background-color: #f8f8f8;
+	overflow-x:hidden;
+	
+}
+
+a {
+	text-decoration:none;
+	#color:#22e;
+}
+
+a:hover {
+	color:#aaa;
+	cursor:pointer;	
+}
+
+
+input.submit {
+	color:#222; 
+	font: 18px helvetica,sans-serif; 
+	background-color: #bbb;
+	border:none;
+	border-bottom-left-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+}
+input.submit:hover {
+	cursor:pointer;
+}
+
+.header {
+	font-family: helvetica;
+	font-size: 20px;
+	text-align:left;
+	background-color: #c44;
+	margin: -10px -10px 0px -10px;
+	padding: 10px;
+}
+
+.contact-name {
+	font-size:36px;
+	color:#000;
+}
+
+.title {
+	font-size:24px;
+	color: #eee;
+	padding: 0 0 0 300px;
+}
+
+.subtitle {
+	font-size:14px;
+	color: #ccc;
+	margin: 2px;
+	padding: 0 0 0 150px;
+	text-align:left;
+}
+
+form label {
+	font-family: helvetica;
+	padding:7px;
+}
+
+.post-form-textarea {
+	border-bottom-left-radius: 3px 3px;
+	border-bottom-right-radius: 3px 3px;
+	border-top-left-radius: 3px 3px;
+	border-top-right-radius: 3px 3px;
+	margin: 7px;
+	font: 24px 'Helvetica Neue';
+}

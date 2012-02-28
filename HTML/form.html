@@ -1,0 +1,64 @@
+<script type="text/javascript">
+	function clearForm(form) {
+		var form = document.getElementById(form);
+		form.innerHTML = ""
+	}
+</script>
+
+<form action = "/addContact" method = "post">
+	<div>
+		<fieldset name="contactType" style="width:200px;">
+			<legend>Contact Type</legend>
+			<input type="radio" name="contactType" value="CAMPER" checked>Camper</input>
+			<br/>
+			<input type="radio" name="contactType" value="PARENT">Parent</input>
+			<br/>
+			<input type="radio" name="contactType" value="COUNSELOR">Counselor</input>
+		</fieldset>
+		<br/>
+		<label>First Name</label><br/>
+		<input type="text" id = "firstNameBox" name = "firstName" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('firstNameBox')"></input>
+		<br/>
+		<label>Last Name</label><br/>
+		<input type="text" id = "lastNameBox" name = "lastName" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('lastNameBox')"></input>
+		<br/>
+		<label>Email (separate multiple by commas)</label><br/>
+		<input type="text" id = "emailBox" name = "email" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('emailBox')"></input>
+		<br/>
+		<label>Cell Phone</label><br/>
+		<input type="text" id = "phoneBox" name = "cellPhone" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('phoneBox')"></input>
+		<br/>
+		<label>Home Phone</label><br/>
+		<input type="text" id = "homePhoneBox" name = "homePhone" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('homePhoneBox')"></input>
+		<br/>
+		<label>School</label><br/>
+		<input type="text" id = "schoolBox" name = "school" rows = "1" cols = "30" class = "post-form-textarea" onfocus = "clearForm('schoolBox')"></input>
+		<br/>
+		<label>Address</label><br/>
+		<textarea id = "addressBox" name = "address" rows = "2" cols = "30" class = "post-form-textarea" onfocus = "clearForm('addressBox')"></textarea>
+		<br/>
+		<label>Notes</label><br/>
+		<textarea id = "notesBox" name = "notes" rows = "2" cols = "30" class = "post-form-textarea" onfocus = "clearForm('notesBox')"></textarea>
+		<br/>
+		<label>Week</label>
+		<select name="week">
+			<option value="" />
+			{% for week in weeks %}
+				<option value="{{week.key.id}}">{{week.week}},&nbsp;{{week.year}}</option><br/>
+			{% endfor %}
+		</select>
+		<br/>
+		<label>Relation</label>
+		<select name="relation">
+			<option value="" />
+			{% for contact in contacts %}
+				<option value="{{contact.key.id}}">{{contact.firstName}}&nbsp;{{contact.lastName}}</option><br/>
+			{% endfor %}
+		</select>
+		<br/>
+	</div>
+	<br/>
+	<div><input type = "submit" value = "Submit" class = "submit"></input></div>
+</form>
+
+<br/>

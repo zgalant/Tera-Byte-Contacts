@@ -1,0 +1,10 @@
+<form action = "/filter/week" method = "post">
+	<label>View Week</label>
+	<select name="week">
+		<option value="-1">-View All Weeks-</option>
+		{% for week in weeks %}
+			<option value="{{week.key.id}}">{{week.week}},&nbsp;{{week.year}}</option><br/>
+		{% endfor %}
+	</select>
+	<input type = "submit" value = "Filter" class = "submit"></input>
+</form>

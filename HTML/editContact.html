@@ -1,0 +1,41 @@
+<form action = "/editContact" method = "post">
+	<input type="hidden" name="contact" value="{{contact.key.id}}">
+	<div>
+		<fieldset name="contactType" style="width:200px;">
+			<legend>Contact Type</legend>
+			<input type="radio" name="contactType" value="CAMPER">Camper</input>
+			<br/>
+			<input type="radio" name="contactType" value="PARENT">Parent</input>
+			<br/>
+			<input type="radio" name="contactType" value="COUNSELOR">Counselor</input>
+		</fieldset>
+		<br/>
+		<label>First Name</label><br/>
+		<input type="text" id = "firstNameBox" name = "firstName" rows = "1" cols = "30" class = "post-form-textarea" value="{{contact.firstName|escape}}"></input>
+		<br/>
+		<label>Last Name</label><br/>
+		<input type="text" id = "lastNameBox" name = "lastName" rows = "1" cols = "30" class = "post-form-textarea" value = "{{contact.lastName|escape}}"></input>
+		<br/>
+		<label>Email (separate multiple by commas)</label><br/>
+		<input type="text" id = "emailBox" name = "email" rows = "1" cols = "30" class = "post-form-textarea"value="{{contact.email|escape}}"></input>
+		<br/>
+		<label>Cell Phone</label><br/>
+		<input type="text" id = "phoneBox" name = "cellPhone" rows = "1" cols = "30" class = "post-form-textarea" value="{{contact.cellPhone|escape}}"></input>
+		<br/>
+		<label>Home Phone</label><br/>
+		<input type="text" id = "homePhoneBox" name = "homePhone" rows = "1" cols = "30" class = "post-form-textarea" value="{{contact.homePhone|escape}}"></input>
+		<br/>
+		<label>School</label><br/>
+		<input type="text" id = "schoolBox" name = "school" rows = "1" cols = "30" class = "post-form-textarea" value="{{contact.school|escape}}"></input>
+		<br/>
+		<label>Address</label><br/>
+		<textarea id = "addressBox" name = "address" rows = "3" cols = "30" class = "post-form-textarea" onfocus = "clearForm('addressBox')">{{contact.address|escape}}</textarea>
+		<br/>
+		<label>Notes</label><br/>
+		<textarea id = "notesBox" name = "notes" rows = "2" cols = "30" class = "post-form-textarea" onfocus = "clearForm('notesBox')">{{contact.notes|escape}}</textarea>
+		<br/>
+	</div>
+	<div><input type = "submit" value = "Submit" class = "submit"></input></div>
+</form>
+
+<br/>

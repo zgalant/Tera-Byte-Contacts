@@ -1,0 +1,16 @@
+<div class = "contact">
+	<a href="/contact/{{contact.key.id}}" class = "contact-name">{{contact.firstName|escape}}&nbsp;{{contact.lastName|escape}}</a>&nbsp;
+	<a href="/contact/edit/{{contact.key.id}}">edit</a>
+	<h2 class = "contact-type">{{ contact.contactType|escape }}</h2>
+	<a href="mailto:{{contact.email|escape}}">{{ contact.email|escape }}</a>
+	<p class = "contact-phone">{{ contact.cellPhone|escape }}</p>
+	<p class = "contact-phone">{{ contact.homePhone|escape }}</p>
+	<p class = "contact-school">{{ contact.school|escape }}</p>
+	<p class = "contact-address">{{contact.address|escape}}</p>
+	<p class = "contact-notes">{{contact.notes|escape}}</p>
+	<p>
+		{% for week in weeks %}
+			<span>{{week.week}},&nbsp;{{week.year}}&nbsp;&nbsp;*&nbsp;&nbsp;</span>
+		{% endfor %}
+	</p>
+</div>

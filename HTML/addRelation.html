@@ -1,0 +1,23 @@
+<div>Add Relation</div>
+<form action = "/addRelation" method = "post">
+	<input type="hidden" name = "contact" value = "{{contact.key.id}}" />
+	<select name="relation">
+		<option value="" />
+		{% for contact in contacts %}
+			<option value="{{contact.key.id}}">{{contact.firstName}}&nbsp;{{contact.lastName}}</option><br/>
+		{% endfor %}
+		<input type = "submit" value = "Add Relation" class = "submit"></input>
+	</select>
+</form>
+
+<div>Add Week</div>
+<form action = "/addWeekForUser" method = "post">
+	<input type="hidden" name = "contact" value = "{{contact.key.id}}" />
+	<select name="week">
+		<option value="" />
+		{% for week in weeks %}
+			<option value="{{week.key.id}}">{{week.week}},&nbsp;{{week.year}}</option><br/>
+		{% endfor %}
+		<input type = "submit" value = "Add Week" class = "submit"></input>
+	</select>
+</form>
