@@ -1,6 +1,6 @@
 body {
 	text-align:left;
-	background-color: #373C46;
+	background-color: #aaa;
 	overflow-x:hidden;
 	font-family: helvetica;
 }
@@ -9,14 +9,14 @@ body {
 	margin:0px 300px 0px 300px;
 	padding: 20px;
 	text-align:left;
-	background-color: #f8f8f8;
+	background-color: #fff;
 	overflow-x:hidden;
 	
 }
 
 a {
 	text-decoration:none;
-	#color:#22e;
+	color:#aaa;
 }
 
 a:hover {
@@ -24,16 +24,20 @@ a:hover {
 	cursor:pointer;	
 }
 
+input {
+	background-color:#f4f4f4;
+}
 
 input.submit {
 	color:#222; 
 	font: 18px helvetica,sans-serif; 
-	background-color: #bbb;
+	background-color: #eee;
 	border:none;
 	border-bottom-left-radius: 5px 5px;
 	border-bottom-right-radius: 5px 5px;
 	border-top-left-radius: 5px 5px;
 	border-top-right-radius: 5px 5px;
+	box-shadow: 1px 1px 1px 1px #888;
 }
 input.submit:hover {
 	cursor:pointer;
@@ -57,6 +61,7 @@ input.submit:hover {
 	font-size:24px;
 	color: #eee;
 	padding: 0 0 0 300px;
+	font-weight:bold;
 }
 
 .subtitle {
