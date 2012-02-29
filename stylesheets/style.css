@@ -1,26 +1,38 @@
 body {
 	text-align:left;
-	background-color: #aaa;
 	overflow-x:hidden;
 	font-family: helvetica;
 }
 
 .content {
-	margin:0px 300px 0px 300px;
+	margin:auto;
 	padding: 20px;
 	text-align:left;
 	background-color: #fff;
-	overflow-x:hidden;
-	
+	overflow:hidden;
+	width:700px;
+	margin:0 auto;
+}
+
+#wrap {
+	min-height:94%;
+}
+
+#footer {	
+	font-family: helvetica;
+	font-size: 20px;
+	text-align:left;
+	background-color: #c44;
+	padding: 10px;
 }
 
 a {
 	text-decoration:none;
-	color:#aaa;
+	color:#eee;
 }
 
 a:hover {
-	color:#aaa;
+	color:#ddd;
 	cursor:pointer;	
 }
 
@@ -41,6 +53,7 @@ input.submit {
 }
 input.submit:hover {
 	cursor:pointer;
+	background-color: #ddd;
 }
 
 .header {
@@ -60,7 +73,7 @@ input.submit:hover {
 .title {
 	font-size:24px;
 	color: #eee;
-	padding: 0 0 0 300px;
+	padding: 0 0 0 270px;
 	font-weight:bold;
 }
 
