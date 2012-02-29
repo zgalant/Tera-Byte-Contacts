@@ -28,11 +28,11 @@ body {
 
 a {
 	text-decoration:none;
-	color:#eee;
+	color:#333;
 }
 
 a:hover {
-	color:#ddd;
+	color:#555;
 	cursor:pointer;	
 }
 
