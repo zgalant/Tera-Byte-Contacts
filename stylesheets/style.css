@@ -98,3 +98,15 @@ form label {
 	margin: 7px;
 	font: 24px 'Helvetica Neue';
 }
+
+.listing {
+	margin-bottom:5px;
+}
+
+.listing a {
+	color:#333;
+	font-size:16px;
+}
+.listing a:hover {
+	text-decoration:underline;
+}
